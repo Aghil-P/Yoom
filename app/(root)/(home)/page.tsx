@@ -3,8 +3,8 @@ import React from "react";
 
 const Home = () => {
   const now=new Date();
-  const time=now.toLocaleString('en-US',{hour:'2-digit',minute:'2-digit'});
-  const date=(new Intl.DateTimeFormat('en-US',{dateStyle: 'full'})).format(now);
+  const time=now.toLocaleString('en-IN',{hour:'2-digit',minute:'2-digit'});
+  const date=(new Intl.DateTimeFormat('en-IN',{dateStyle: 'full'})).format(now);
   
   return (
     <section className="text-white flex flex-col gap-10 size-full">
