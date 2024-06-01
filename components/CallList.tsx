@@ -8,7 +8,7 @@ import MeetingCard from "./MeetingCard";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useToast } from "./ui/use-toast";
-import { useGetCalls } from "@/Hooks/useGetCalls";
+import { useGetCalls } from "@/Hooks/useGetCall";
 
 const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
   const router = useRouter();
@@ -62,7 +62,7 @@ const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
     if (type === "recordings") {
       fetchRecordings();
     }
-  }, [type, callRecordings]);
+  }, [type, callRecordings, toast]);
 
   if (isLoading) return <Loader />;
 

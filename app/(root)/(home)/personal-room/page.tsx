@@ -30,7 +30,7 @@ const PersonalRoom = () => {
   const meetingId = user?.id;
   const client = useStreamVideoClient();
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}?personal=true`;
-  const { call } = useGetCallById(meetingId!);
+  const { call } = useGetCallById(meetingLink!);
   const router = useRouter();
   const startRoom = async () => {
     if (!client || !user) return;
