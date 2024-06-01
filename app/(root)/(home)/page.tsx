@@ -5,7 +5,7 @@ const Home = () => {
   let now=new Date();
   const offsetMilliseconds = (5 * 60 + 30) * 60 * 1000;
   now=new Date(now.getTime() + offsetMilliseconds);
-  const time=now.toLocaleString('en-IN',{hour:'2-digit',minute:'2-digit'});
+  const time=now.toLocaleString('en-IN',{hour:'2-digit',minute:'2-digit'}).toUpperCase();
   const date=(new Intl.DateTimeFormat('en-IN',{dateStyle: 'full'})).format(now);
   
   return (
