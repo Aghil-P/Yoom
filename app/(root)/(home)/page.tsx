@@ -2,7 +2,9 @@ import MeetingTypeList from "@/components/MeetingTypeList";
 import React from "react";
 
 const Home = () => {
-  const now=new Date();
+  let now=new Date();
+  const offsetMilliseconds = (5 * 60 + 30) * 60 * 1000;
+  now=new Date(now.getTime() + offsetMilliseconds);
   const time=now.toLocaleString('en-IN',{hour:'2-digit',minute:'2-digit'});
   const date=(new Intl.DateTimeFormat('en-IN',{dateStyle: 'full'})).format(now);
   
