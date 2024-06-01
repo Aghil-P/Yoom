@@ -3,11 +3,12 @@
 import { Call, CallRecording } from "@stream-io/video-react-sdk";
 
 import Loader from "./Loader";
-import { useGetCalls } from "@/hooks/useGetCall";
+
 import MeetingCard from "./MeetingCard";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useToast } from "./ui/use-toast";
+import { useGetCalls } from "@/Hooks/useGetCalls";
 
 const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
   const router = useRouter();
